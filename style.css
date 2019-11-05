@@ -1,0 +1,245 @@
+@font-face {
+  font-family: "Gilroy";
+  src: local("Gilroy"),
+       url(/fonts/gilroyextrabold.woff) format("woff"),
+       url(/fonts/gilroyextrabold.woff2) format("woff2");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: local("Gilroy"),
+       url(/fonts/gilroylight.woff) format("woff"),
+       url(/fonts/gilroylight.woff2) format("woff2");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: local("Open Sans"),
+       url(/fonts/opensans.woff) format("woff"),
+       url(/fonts/opensans.woff2) format("woff2");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: local("Open Sans"),
+       url(/fonts/opensanslight.woff) format("woff"),
+       url(/fonts/opensanslight.woff2) format("woff2");
+  font-weight: 300;
+}
+
+.visually-hidden {
+  /* Удаляем элемент из потока документа */
+  position: absolute;
+  /* Временное решение для неверно произносимого, размазанного текста */
+  white-space: nowrap;
+  /* Устанавливаем минимально возможный размер (некоторые скринридеры игнорируют элементы с нулевой высотой и шириной) */
+  width: 1px;
+  height: 1px;
+  /* Скрываем вылезающий за границы контент */
+  overflow: hidden;
+  /* Сбрасываем любые свойства, которые могут повлиять на размер элемента */
+  border: 0;
+  padding: 0;
+  /* Вырезаем ту часть контента, которая должна отображаться. */
+  /* Устаревшее свойство clip для старых браузеров */
+  clip: rect(0 0 0 0);
+  /* clip-path для новых браузеров. inset(50%) определяет область вставки, которая позволит контенту исчезнуть.  */
+  clip-path: inset(50%); 
+    /* Похоже, никто до конца не понимает, почему тут margin: -1px. Кроме того, это приводит к проблемам (читай: https://github.com/h5bp/html5-boilerplate/issues/1985). */
+  margin: -1px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 30px;
+  color: #464646;
+
+  background-color: #ffffff;
+}
+
+
+.position-wrapper {
+  width: 1160px;
+
+  box-sizing: border-box;
+
+  margin: 0 auto;
+}
+
+.header {
+  position: relative;
+
+  padding: 35px 60px 40px 60px;
+  margin-top: 40px;
+
+  background-color: #f7e296;
+  color: #000000;
+}
+
+.logo {
+  position: absolute;
+  top: -25px;
+  left: 56px;
+
+  color: #000000;
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: 800;
+
+  text-decoration: none;
+}
+
+.logo:hover {
+  opacity: 0.6;
+}
+
+.logo:active {
+  opacity: 0.3;
+}
+
+.search input[type="search"] {
+  background-color: transparent;
+
+  border: 2px solid transparent;
+
+  width: 340px;
+
+  padding-left: 40px;
+  padding-bottom: 16px;
+}
+
+.search input[type="search"]::placeholder {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+
+  opacity: 0.3;
+}
+
+.search input[type="search"]:hover::placeholder {
+  opacity: 0.6;
+}
+
+.search input[type="search"]:focus::placeholder {
+  opacity: 1;
+}
+
+.search input[type="search"]:focus {
+  border-bottom-color: #000000;
+  outline: none;
+}
+
+
+.search label {
+  background-image: url(/img/search.svg);
+  background-repeat: no-repeat;
+  background-position: 0 3px;
+}
+
+.search input[type="submit"] {
+  /* display: none;    НУЖЕН JS*/
+
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+
+  padding: 15px 20px;
+  margin-left: -5px;
+
+  border: 2px solid #000000;
+
+  background-color: transparent;
+}
+
+.search input[type="submit"]:hover {
+  background-color: #000000;
+
+  color: #ffffff;
+}
+
+.search input[type="submit"]:active {
+  background-color: #000000;
+
+  color: #434343;
+}
+
+.flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.profile {
+  position: relative;
+
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.button-nav {
+  display: inline-block;
+
+  color: #000000;
+  text-decoration: none;
+
+  padding-left: 25px;
+}
+
+.button-nav:hover {
+  opacity: 0.6;
+}
+
+.button-nav:active {
+  opacity: 0.3;
+}
+
+.button-nav::before {
+  position: absolute;
+  top: 9px;
+  left: 0;
+  content: "";
+
+  width: 13px;
+  height: 13px;
+
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.login::before {
+  background-image: url(/img/user.svg);
+}
+
+.compare::before {
+  background-image: url(/img/compare.svg);
+}
+
+.cart::before {
+  background-image: url(/img/cart.svg);
+}
+
+.relative {
+  position: relative;
+}
+
+.search {
+  margin-right: 115px;
+}
+
+.cart-flex {
+  margin-left: 40px;
+}
+
+.compare-flex {
+  margin-left: auto;
+}
