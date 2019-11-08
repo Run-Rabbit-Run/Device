@@ -9,43 +9,92 @@
   <h1 class="visually-hidden">Магазин техники - Device</h1>
 
   <header class="header position-wrapper">
-    <a class="logo" href="#">DEVICE</a>
+    <a class="logo" href="#">Device</a>
 
     <div class="flex">
-      <form class="search">
-        <label aria-label="Поиск по сайту">
-          <input type="search" name="search" placeholder="Поиск по сайту">
-        </label>
-        <input type="submit" name="Найти" value="Найти">
-      </form>
-      <ul class="profile">
-        <li><a class="button-nav login" href="#">Войти</a></li>
-      </ul>
-      <div class="relative compare-flex">
-        <a class="button-nav compare" href="#">Сравнить</a>
+      <div class="flex-left">
+        <form class="search">
+          <label aria-label="Поиск по сайту">
+            <input type="search" name="search" placeholder="Поиск по сайту">
+          </label>
+          <input class="js-search-hide" type="submit" name="Найти" value="Найти">
+        </form>
+        <a class="catalog" href="#">Каталог товаров</a>
+        <div class="plus"></div>
       </div>
-      <div class="relative cart-flex">
-        <a class="button-nav cart" href="#">Корзина</a>
+  
+      <div class="flex-right">
+        <div class="flex">
+          <ul class="profile">
+            <li><a class="button-nav login" href="#">Войти</a></li>
+          </ul>
+          <div class="relative compare-flex">
+            <a class="button-nav compare" href="#">Сравнить</a>
+          </div>
+          <div class="relative cart-flex">
+            <a class="button-nav cart" href="#">Корзина</a>
+          </div>
+        </div>
+        <ul class="sub-menu flex">
+          <li><a href="#">Доставка</a></li>
+          <li><a href="#">Гарантия</a></li>
+          <li><a class="lacuna" href="#">Контакты</a></li>
+        </ul>
+      </div>
+  
+      <div class="flex-bottom">
+        <nav>
+          <ul class="catalog-menu">
+            <li>
+              <ul class="photo-video">
+                <li><a href="#">Виртуальная реальность</a></li>
+                <li><a href="#">Моноподы для селфи</a></li>
+                <li><a href="#">Экшн-камеры</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul class="watches">
+                <li><a href="#">Фитнес-браслеты</a></li>
+                <li><a href="#">Умные часы</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul class="flying">
+                <li><a href="#">Квадрокоптеры</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
       </div>
     </div>
-
-    <nav class="main-menu">
-      <ul>
-        <li><a>Каталог товаров</a>
-          <ul>
-            <li><a>Виртуальная реальность</a></li>
-            <li><a>Моноподы для селфи</a></li>
-            <li><a>Экшн-камеры</a></li>
-            <li><a>Фитнес-браслеты</a></li>
-            <li><a>Умные часы</a></li>
-            <li><a>Квадрокоптеры</a></li>
-          </ul>
-        </li>
-        <li><a>Доставка</a></li>
-        <li><a>Гарантия</a></li>
-        <li><a>Контакты</a></li>
-      </ul>
-    </nav>
   </header>
+
+  <script>
+    var buttonCatalog = document.querySelector(".catalog");
+    var subMenu = document.querySelector(".flex-bottom");
+    var search = document.querySelector("input[type='search']");
+    var searchButton = document.querySelector("input[name='Найти']");
+
+    buttonCatalog.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      if (subMenu.classList.contains("js-menu-show")) {
+        subMenu.classList.remove("js-menu-show");
+      } else {
+        subMenu.classList.add("js-menu-show");
+      }
+    });
+
+    search.addEventListener("focus", function (evt) {
+      evt.preventDefault();
+      searchButton.classList.remove("js-search-hide");
+      searchButton.classList.add("js-search-show");
+    });
+
+    search.addEventListener("blur", function (evt) {
+      evt.preventDefault();
+      searchButton.classList.remove("js-search-show");
+      searchButton.classList.add("js-search-hide");
+    });
+  </script>
 </body>
 </html>
