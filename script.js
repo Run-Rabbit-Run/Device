@@ -2,8 +2,18 @@ var buttonCatalog = document.querySelector(".catalog");
 var subMenu = document.querySelector(".flex-bottom");
 var search = document.querySelector("input[type='search']");
 var searchButton = document.querySelector("input[name='Найти']");
+var plusButton = document.querySelector(".plus");
 
 buttonCatalog.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  if (subMenu.classList.contains("js-menu-show")) {
+    subMenu.classList.remove("js-menu-show");
+  } else {
+    subMenu.classList.add("js-menu-show");
+  }
+});
+
+plusButton.addEventListener("click", function (evt) {
   evt.preventDefault();
   if (subMenu.classList.contains("js-menu-show")) {
     subMenu.classList.remove("js-menu-show");
