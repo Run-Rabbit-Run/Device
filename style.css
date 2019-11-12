@@ -31,25 +31,21 @@
 }
 
 .visually-hidden {
-  /* Удаляем элемент из потока документа */
   position: absolute;
-  /* Временное решение для неверно произносимого, размазанного текста */
   white-space: nowrap;
-  /* Устанавливаем минимально возможный размер (некоторые скринридеры игнорируют элементы с нулевой высотой и шириной) */
   width: 1px;
   height: 1px;
-  /* Скрываем вылезающий за границы контент */
   overflow: hidden;
-  /* Сбрасываем любые свойства, которые могут повлиять на размер элемента */
   border: 0;
   padding: 0;
-  /* Вырезаем ту часть контента, которая должна отображаться. */
-  /* Устаревшее свойство clip для старых браузеров */
   clip: rect(0 0 0 0);
-  /* clip-path для новых браузеров. inset(50%) определяет область вставки, которая позволит контенту исчезнуть.  */
-  clip-path: inset(50%); 
-    /* Похоже, никто до конца не понимает, почему тут margin: -1px. Кроме того, это приводит к проблемам (читай: https://github.com/h5bp/html5-boilerplate/issues/1985). */
+  clip-path: inset(50%);
   margin: -1px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 body {
@@ -66,7 +62,6 @@ body {
   background-color: #ffffff;
 }
 
-
 .position-wrapper {
   width: 1160px;
 
@@ -78,7 +73,7 @@ body {
 .header {
   position: relative;
 
-  padding: 30px 60px 25px 60px;
+  padding: 30px 60px;
   margin-top: 40px;
 
   background-color: #f7e296;
@@ -351,7 +346,23 @@ body {
 .flex-bottom {
   display: none;
 
+  width: 100%;
+
+  position: absolute;
+  top: 162px;
+  left: 0;
+
+  background-color: #f7e296;
+
   margin-bottom: 15px;
+
+  z-index: 1;
+}
+
+.flex-bottom nav {
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-bottom: 33px;
 }
 
 .js-menu-show {
@@ -411,4 +422,212 @@ body {
 .watches,
 .flying {
   min-width: 160px;
+}
+
+/* -------------------------- Слайдер ------------------------ */
+
+.slider p,
+.slider b,
+.slider li,
+.slider ul {
+  list-style: none;
+
+  padding: 0;
+  margin: 0;
+}
+
+.slider,
+.slider div {
+  box-sizing: border-box;
+}
+
+.slider a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.slider {
+  background: linear-gradient(#f7e296 21.5%, #ffffff 21.5%);
+
+  height: 500px;
+
+  margin-top: -1px;
+}
+
+.slider-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  display: none;
+}
+
+.slider-left-side {
+  display: flex;
+
+  box-sizing: border-box;
+
+  width: 600px;
+  padding-right: 25px;
+}
+
+.slider-image {
+  margin: 0 auto;
+}
+
+.slider-right-side {
+  position: relative;
+
+  width: 560px;
+
+  padding-right: 75px;
+  padding-top: 205px;
+}
+
+.slider-number {
+  position: absolute;
+  top: 60px;
+  right: 45px;
+
+  font-family: "Gilroy", sans-serif;
+  font-size: 179px;
+  letter-spacing: 0.01em;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.slider-right-side::after {
+  content: "";
+  position: absolute;
+  top: 35px;
+  left: 0;
+
+  width: 100px;
+  height: 7px;
+
+  background-color: #ffffff;
+}
+
+.slider-slogan {
+  position: absolute;
+  top: 75px;
+  left: 0;
+
+  font-family: "Gilroy", sans-serif;
+  font-size: 47px;
+  line-height: 56px;
+  letter-spacing: 0.01em;
+  font-weight: 800;
+  color: #000000;
+}
+
+.slider-about {
+  display: inline-block;
+  box-sizing: border-box;
+
+  padding: 8px 42px;
+  margin-top: 45px;
+
+  height: 40px;
+
+  text-align: center;
+  vertical-align: middle;
+  font-family: "Gilroy", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.2em;
+  font-weight: 800;
+  color: #000000;
+  text-transform: uppercase;
+
+  background: linear-gradient(transparent 40%, #f0c52e 40%, #f0c52e 60%, transparent 60%);
+}
+
+.slider-about:hover {
+  background-color: #f0c52e;
+}
+
+.slider-about:active {
+  color: #a88a20;
+}
+
+.slider-toggle {
+  position: absolute;
+  top: 325px;
+  right: 80px;
+}
+
+.slider-button {
+  box-sizing: border-box;
+
+  padding: 0;
+  margin: 0;
+  margin-right: 20px;
+
+  width: 12px;
+  height: 12px;
+
+  border: 1px solid #000000;
+  border-radius: 50%;
+  
+  background-color: transparent;
+
+  cursor: pointer;
+}
+
+.slider-button:last-child {
+  margin-right: 0;
+}
+
+.slider-button-active {
+  box-shadow:
+    inset 0 0 0 3px #ffffff,
+    inset 0 0 0 4px #000000;
+
+  cursor: auto;
+}
+
+.slider .characteristics-list {
+
+}
+
+.slider-item .characteristics-type {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+  color: #464646;
+}
+
+.slider-item .characteristics-value {
+  font-family: "Gilroy", sans-serif;
+  font-size: 36px;
+  line-height: 48px;
+  letter-spacing: 0.01em;
+  font-weight: 300;
+  color: #000000;
+  white-space: nowrap;
+}
+
+.slider-item .characteristics-list {
+  margin-top: 55px;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  white-space: nowrap;
+}
+
+.slider-item .charasteristics-flex {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column-reverse;
+
+  margin-right: 80px;
+}
+
+.js-slide-show {
+  display: flex;
 }

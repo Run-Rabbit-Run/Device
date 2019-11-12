@@ -69,12 +69,117 @@
     </div>
   </header>
 
+  <main>
+    <section class="slider position-wrapper">
+      <h2 class="visually-hidden">Популярные товары</h2>
+
+      <div class="slider-item js-slide-1 js-slide-show">
+        <div class="slider-left-side">
+          <img class="slider-image" src="/img/slider-1.png" alt="Изображение товара">
+        </div>
+        <div class="slider-right-side">
+          <p class="slider-number">01</p>
+          <b class="slider-slogan">
+            Делай селфи,<br>
+            как Бен Стиллер!
+          </b>
+          <p class="slider-definition">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+          <a class="slider-about" href="#">Подробнее</a>
+          <div class="flex slider-toggle">
+            <button class="slider-button slider-button-1 slider-button-active"></button>
+            <button class="slider-button slider-button-2"></button>
+            <button class="slider-button slider-button-3"></button>
+          </div>
+          <ul class="characteristics-list">
+            <li class="charasteristics-flex">
+              <p class="characteristics-type">Длина палки</p>
+              <p class="characteristics-value">8,5 м</p>
+            </li>
+            <li class="charasteristics-flex">
+              <p class="characteristics-type">Вес палки</p>
+              <p class="characteristics-value">5 кг</p>
+            </li>
+            <li class="charasteristics-flex">
+              <p class="characteristics-type">Материал</p>
+              <p class="characteristics-value">Карбон</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="slider-item js-slide-2">
+        <div class="slider-left-side">
+          <img class="slider-image" src="/img/slider-2.png" alt="Изображение товара">
+        </div>
+        <div class="slider-right-side">
+          <p class="slider-number">02</p>
+          <b class="slider-slogan">
+            Худеем<br>
+            правильно!
+          </b>
+          <p class="slider-definition">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+          <a class="slider-about" href="#">Подробнее</a>
+          <div class="flex slider-toggle">
+            <button class="slider-button slider-button-1"></button>
+            <button class="slider-button slider-button-2 slider-button-active"></button>
+            <button class="slider-button slider-button-3"></button>
+          </div>
+          <ul class="characteristics-list">
+            <li class="charasteristics-flex">
+              <p class="characteristics-type">Без подзарядки</p>
+              <p class="characteristics-value">48 часов</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="slider-item js-slide-3">
+        <div class="slider-left-side">
+          <img class="slider-image" src="/img/slider-3.png" alt="Изображение товара">
+        </div>
+        <div class="slider-right-side">
+          <p class="slider-number">03</p>
+          <b class="slider-slogan">
+            Порхает как бабочка,<br>
+            жалит как пчела!
+          </b>
+          <p class="slider-definition">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
+              </p>
+          <a class="slider-about" href="#">Подробнее</a>
+          <div class="flex slider-toggle">
+            <button class="slider-button slider-button-1"></button>
+            <button class="slider-button slider-button-2"></button>
+            <button class="slider-button slider-button-3 slider-button-active"></button>
+          </div>
+          <ul class="characteristics-list">
+            <li class="charasteristics-flex">
+              <p class="characteristics-type">Дальность полета</p>
+              <p class="characteristics-value">800 м</p>
+            </li>
+            <li class="charasteristics-flex">
+              <p class="characteristics-type">Радиус поражения</p>
+              <p class="characteristics-value">50 м</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
   <script>
     var buttonCatalog = document.querySelector(".catalog");
     var subMenu = document.querySelector(".flex-bottom");
     var search = document.querySelector("input[type='search']");
     var searchButton = document.querySelector("input[name='Найти']");
     var plusButton = document.querySelector(".plus");
+    var sliderButton1 = document.querySelector(".slider-button-1");
+    var sliderButton2 = document.querySelector(".slider-button-2");
+    var sliderButton3 = document.querySelector(".slider-button-3");
+    var slide1 = document.querySelector(".js-slide-1");
+    var slide2 = document.querySelector(".js-slide-2");
+    var slide3 = document.querySelector(".js-slide-3");
+    var slides = [slide1, slide2, slide3];
+
 
     buttonCatalog.addEventListener("click", function (evt) {
       evt.preventDefault();
@@ -104,6 +209,36 @@
       evt.preventDefault();
       searchButton.classList.remove("js-search-show");
       searchButton.classList.add("js-search-hide");
+    });
+
+    sliderButton1.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      if (!slide1.classList.contains("js-slide-show")) {
+        for (var i = 0; i <= slides.length - 1; i++) {
+          slides[i].classList.remove("js-slide-show");
+        }
+        slide1.classList.add("js-slide-show");
+      }
+    });
+
+    sliderButton2.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      if (!slide2.classList.contains("js-slide-show")) {
+        for (var i = 0; i <= slides.length - 1; i++) {
+          slides[i].classList.remove("js-slide-show");
+        }
+        slide2.classList.add("js-slide-show");
+      }
+    });
+
+    sliderButton3.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      if (!slide3.classList.contains("js-slide-show")) {
+        for (var i = 0; i <= slides.length - 1; i++) {
+          slides[i].classList.remove("js-slide-show");
+        }
+        slide3.classList.add("js-slide-show");
+      }
     });
   </script>
 </body>
