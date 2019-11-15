@@ -49,6 +49,8 @@ img {
 }
 
 body {
+  min-width: 1200px;
+
   margin: 0;
   padding: 0;
 
@@ -589,10 +591,6 @@ body {
   cursor: auto;
 }
 
-.slider .characteristics-list {
-
-}
-
 .slider-item .characteristics-type {
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 13px;
@@ -705,8 +703,139 @@ body {
 }
 
 .product-category {
-  margin-bottom: 80px;
+  margin-bottom: 180px;
 }
 
 /*-------------------- Секция с услугами --------------------*/
 
+.service {
+  display: none;
+  
+  margin-top: -390px;
+}
+
+.js-service-show {
+  display: flex;
+}
+
+.services-buttons {
+  display: flex;
+  flex-direction: column;
+  
+  box-sizing: border-box;
+  
+  width: 280px;
+  
+  padding-top: 80px;
+  padding-bottom: 70px;
+  
+  border-right: 4px solid #000000;
+}
+
+.service-button {
+  box-sizing: border-box;
+  
+  border: none;
+  
+  cursor: pointer;
+  
+  padding-right: 0;
+  padding-left: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 25px;
+  margin-right: 120px;
+  
+  height: 40px;
+  width: 160px;
+  
+  text-align: center;
+  vertical-align: middle;
+  font-family: "Gilroy", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.2em;
+  font-weight: 800;
+  color: #000000;
+  text-transform: uppercase;
+  
+  background: linear-gradient(transparent 40%, #f0c52e 40%, #f0c52e 60%, transparent 60%);
+}
+
+.service-button:last-child {
+  margin-bottom: 0;
+}
+
+.service-button:hover {
+  background-color: #f0c52e;
+}
+
+.service-button-active,
+.service-button-active:hover,
+.service-button:active {
+  background: none;
+  background-color: #000000;
+  
+  cursor: auto;
+  
+  margin-right: 0;
+  padding-right: 120px;
+  
+  width: 280px;
+  
+  color: #f7e184;
+}
+
+.service-content {
+  box-sizing: border-box;
+  
+  width: 580px;
+  
+  padding-left: 120px;
+  padding-top: 75px;
+  padding-right: 20px;
+  margin-right: 30px;
+
+  border-left: 4px solid #000000;
+}
+
+.service-content h2 {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
+  
+  font-family: "Gilroy", sans-serif;
+  font-size: 47px;
+  line-height: 48px;
+  letter-spacing: 0.01em;
+  font-weight: 800;
+  color: #000000;
+}
+
+.service-content p {
+  margin: 0;
+  padding: 0;
+}
+
+.service-img {
+  display: flex;
+  
+  width: 260px;
+  
+  padding-bottom: 5px;
+}
+
+.delivery-img {
+  padding-top: 15px;
+  padding-bottom: 0;
+}
+
+.service-img img {
+  margin: auto;
+}
+
+.services-background {
+  height: 290px;
+
+  background-color: #e5e5e5;
+}

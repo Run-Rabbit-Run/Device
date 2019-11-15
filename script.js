@@ -10,6 +10,13 @@ var slide1 = document.querySelector(".js-slide-1");
 var slide2 = document.querySelector(".js-slide-2");
 var slide3 = document.querySelector(".js-slide-3");
 var slides = [slide1, slide2, slide3];
+var delivery = document.querySelector(".js-delivery");
+var warranty = document.querySelector(".js-warranty");
+var credit = document.querySelector(".js-credit");
+var deliveryButton = document.querySelectorAll(".delivery");
+var warrantyButton = document.querySelectorAll(".warranty");
+var creditButton = document.querySelectorAll(".credit");
+var services = [delivery, warranty, credit];
 
 
 buttonCatalog.addEventListener("click", function (evt) {
@@ -54,7 +61,7 @@ for (var j = 0; j <= sliderButton1.length - 1; j++) {
   });
 }
 
-for (var j = 0; j <= sliderButton1.length - 1; j++) {
+for (var j = 0; j <= sliderButton2.length - 1; j++) {
   sliderButton2[j].addEventListener("click", function (evt) {
     evt.preventDefault();
     if (!slide2.classList.contains("js-slide-show")) {
@@ -66,7 +73,7 @@ for (var j = 0; j <= sliderButton1.length - 1; j++) {
   });
 }
 
-for (var j = 0; j <= sliderButton1.length - 1; j++) {
+for (var j = 0; j <= sliderButton3.length - 1; j++) {
   sliderButton3[j].addEventListener("click", function (evt) {
     evt.preventDefault();
     if (!slide3.classList.contains("js-slide-show")) {
@@ -74,6 +81,42 @@ for (var j = 0; j <= sliderButton1.length - 1; j++) {
         slides[i].classList.remove("js-slide-show");
       }
       slide3.classList.add("js-slide-show");
+    }
+  });
+}
+
+for (var j = 0; j <= deliveryButton.length - 1; j++) {
+  deliveryButton[j].addEventListener("click", function (evt) {
+    evt.preventDefault();
+    if (!delivery.classList.contains("js-service-show")) {
+      for (var i = 0; i <= services.length - 1; i++) {
+        services[i].classList.remove("js-service-show");
+      }
+      delivery.classList.add("js-service-show");
+    }
+  });
+}
+
+for (var j = 0; j <= warrantyButton.length - 1; j++) {
+  warrantyButton[j].addEventListener("click", function (evt) {
+    evt.preventDefault();
+    if (!warranty.classList.contains("js-service-show")) {
+      for (var i = 0; i <= services.length - 1; i++) {
+        services[i].classList.remove("js-service-show");
+      }
+      warranty.classList.add("js-service-show");
+    }
+  });
+}
+
+for (var j = 0; j <= creditButton.length - 1; j++) {
+  creditButton[j].addEventListener("click", function (evt) {
+    evt.preventDefault();
+    if (!credit.classList.contains("js-service-show")) {
+      for (var i = 0; i <= services.length - 1; i++) {
+        services[i].classList.remove("js-service-show");
+      }
+      credit.classList.add("js-service-show");
     }
   });
 }

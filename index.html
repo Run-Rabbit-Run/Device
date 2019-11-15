@@ -230,25 +230,70 @@
       </ul>
     </section>
 
-    <section class="services">
+    <div class="services-background"></div>
+
+    <section class="services position-wrapper">
       <h2 class="visually-hidden">Услуги</h2>
 
-      <div class="delivery position-wrapper">
+      <div class="service js-delivery js-service-show">
         <div class="services-buttons">
-          <button class="service-button" type="button">Доставка</button>
-          <button class="service-button" type="button">Гарантия</button>
-          <button class="service-button" type="button">Кредит</button>
+          <button class="service-button delivery service-button-active" type="button">Доставка</button>
+          <button class="service-button warranty" type="button">Гарантия</button>
+          <button class="service-button credit" type="button">Кредит</button>
         </div>
-        
+          
         <div class="service-content">
           <h2>Доставка</h2>
-          <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+           <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
         </div>
-  
-        <div class="service-img">
+    
+        <div class="service-img delivery-img">
           <img src="/img/delivery.svg" alt="">
         </div>
       </div>
+
+      <div class="service js-warranty">
+        <div class="services-buttons">
+          <button class="service-button delivery" type="button">Доставка</button>
+          <button class="service-button warranty service-button-active" type="button">Гарантия</button>
+          <button class="service-button credit" type="button">Кредит</button>
+        </div>
+          
+        <div class="service-content">
+          <h2>Гарантия</h2>
+           <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>
+            Товар, не дом, конечно же.</p>
+        </div>
+    
+        <div class="service-img">
+          <img src="/img/warranty.svg" alt="">
+        </div>
+      </div>
+
+      <div class="service js-credit">
+        <div class="services-buttons">
+          <button class="service-button delivery" type="button">Доставка</button>
+          <button class="service-button warranty" type="button">Гарантия</button>
+          <button class="service-button credit service-button-active" type="button">Кредит</button>
+        </div>
+          
+        <div class="service-content">
+          <h2>Кредит</h2>
+           <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные 
+            условия кредита. Выгодные для нашего банка, разумеется.</p>
+        </div>
+    
+        <div class="service-img">
+          <img src="/img/credit.svg" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section class="friends">
+      <img src="/img/logo-1.png" alt="">
+      <img src="/img/logo-2.jpg" alt="">
+      <img src="/img/logo-3.jpg" alt="">
+      <img src="/img/logo-4.jpg" alt="">
     </section>
   </main>
 
@@ -265,6 +310,13 @@
     var slide2 = document.querySelector(".js-slide-2");
     var slide3 = document.querySelector(".js-slide-3");
     var slides = [slide1, slide2, slide3];
+    var delivery = document.querySelector(".js-delivery");
+    var warranty = document.querySelector(".js-warranty");
+    var credit = document.querySelector(".js-credit");
+    var deliveryButton = document.querySelectorAll(".delivery");
+    var warrantyButton = document.querySelectorAll(".warranty");
+    var creditButton = document.querySelectorAll(".credit");
+    var services = [delivery, warranty, credit];
 
 
     buttonCatalog.addEventListener("click", function (evt) {
@@ -309,7 +361,7 @@
       });
     }
 
-    for (var j = 0; j <= sliderButton1.length - 1; j++) {
+    for (var j = 0; j <= sliderButton2.length - 1; j++) {
       sliderButton2[j].addEventListener("click", function (evt) {
         evt.preventDefault();
         if (!slide2.classList.contains("js-slide-show")) {
@@ -321,7 +373,7 @@
       });
     }
 
-    for (var j = 0; j <= sliderButton1.length - 1; j++) {
+    for (var j = 0; j <= sliderButton3.length - 1; j++) {
       sliderButton3[j].addEventListener("click", function (evt) {
         evt.preventDefault();
         if (!slide3.classList.contains("js-slide-show")) {
@@ -329,6 +381,42 @@
             slides[i].classList.remove("js-slide-show");
           }
           slide3.classList.add("js-slide-show");
+        }
+      });
+    }
+
+    for (var j = 0; j <= deliveryButton.length - 1; j++) {
+      deliveryButton[j].addEventListener("click", function (evt) {
+        evt.preventDefault();
+        if (!delivery.classList.contains("js-service-show")) {
+          for (var i = 0; i <= services.length - 1; i++) {
+            services[i].classList.remove("js-service-show");
+          }
+          delivery.classList.add("js-service-show");
+        }
+      });
+    }
+
+    for (var j = 0; j <= warrantyButton.length - 1; j++) {
+      warrantyButton[j].addEventListener("click", function (evt) {
+        evt.preventDefault();
+        if (!warranty.classList.contains("js-service-show")) {
+          for (var i = 0; i <= services.length - 1; i++) {
+            services[i].classList.remove("js-service-show");
+          }
+          warranty.classList.add("js-service-show");
+        }
+      });
+    }
+
+    for (var j = 0; j <= creditButton.length - 1; j++) {
+      creditButton[j].addEventListener("click", function (evt) {
+        evt.preventDefault();
+        if (!credit.classList.contains("js-service-show")) {
+          for (var i = 0; i <= services.length - 1; i++) {
+            services[i].classList.remove("js-service-show");
+          }
+          credit.classList.add("js-service-show");
         }
       });
     }
