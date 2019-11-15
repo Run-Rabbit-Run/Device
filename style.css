@@ -452,6 +452,7 @@ body {
   height: 500px;
 
   margin-top: -1px;
+  margin-bottom: 100px;
 }
 
 .slider-item {
@@ -631,3 +632,81 @@ body {
 .js-slide-show {
   display: flex;
 }
+
+/*----------------------- Популярные товары -----------------------*/
+
+.category-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.category-list div {
+  display: flex;
+
+  width: 160px;
+  height: 160px;
+
+  box-sizing: border-box;
+
+  background-color: #f7e296;
+}
+
+.category-list img {
+  margin: auto;
+}
+
+.category-list li {
+  padding: 0;
+  margin: 0;
+
+  width: 160px;
+}
+
+.category-list .monopod {
+  margin-top: 40px;
+}
+
+.category-item {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  text-decoration: none;
+  color: #000000;
+  font-family: "Gilroy", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+}
+
+.category-list p {
+  margin: 0;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.category-item:hover div,
+.category-item:active div {
+  background-color: #f0c52e;
+}
+
+.category-item:active img,
+.category-item:active p {
+  opacity: 0.5;
+}
+
+.product-category {
+  margin-bottom: 80px;
+}
+
+/*-------------------- Секция с услугами --------------------*/
+
