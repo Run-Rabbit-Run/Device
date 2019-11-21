@@ -88,10 +88,11 @@ body {
   left: 56px;
 
   color: #000000;
+  font-family: "Gilroy", sans-serif;
   font-size: 48px;
   line-height: 48px;
   font-weight: 800;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
 
   text-decoration: none;
   text-transform: uppercase;
@@ -273,29 +274,22 @@ body {
   position: relative;
 }
 
-.button-nav::before {
-  position: absolute;
-  top: 9px;
-  left: 0;
-  content: "";
-
-  width: 13px;
-  height: 13px;
-
-  background-repeat: no-repeat;
-  background-position: 0 0;
-}
-
-.login::before {
+.login {
   background-image: url(/img/user.svg);
+  background-repeat: no-repeat;
+  background-position: 1px 9px;
 }
 
-.compare::before {
+.compare {
   background-image: url(/img/compare.svg);
+  background-repeat: no-repeat;
+  background-position: 6px 10px;
 }
 
-.cart::before {
+.cart {
   background-image: url(/img/cart.svg);
+  background-repeat: no-repeat;
+  background-position: 3px 9px;
 }
 
 .catalog {
@@ -454,7 +448,7 @@ body {
   height: 500px;
 
   margin-top: -1px;
-  margin-bottom: 100px;
+  margin-bottom: 90px;
 }
 
 .slider-item {
@@ -608,10 +602,12 @@ body {
   font-weight: 300;
   color: #000000;
   white-space: nowrap;
+
+  margin-bottom: 6px;
 }
 
 .slider-item .characteristics-list {
-  margin-top: 55px;
+  margin-top: 50px;
 
   display: flex;
   justify-content: flex-start;
@@ -624,7 +620,7 @@ body {
   justify-content: flex-start;
   flex-direction: column-reverse;
 
-  margin-right: 80px;
+  margin-right: 78px;
 }
 
 .js-slide-show {
@@ -862,4 +858,437 @@ body {
 .friends img:hover {
   filter: none;
   opacity: 1;
+}
+
+/*---------------- Блоки "О нас" и  "Контакты" ----------------*/
+
+.flex-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 55px;
+}
+
+.about-us,
+.contacts {
+  width: 560px;
+
+  box-sizing: border-box;
+}
+
+.about-us {
+  padding-right: 82px;
+}
+
+.about-us h2,
+.contacts  h2 {
+  position: relative;
+
+  margin: 0;
+  padding: 0;
+  padding-top: 50px;
+  margin-bottom: 45px;
+
+  font-family: "Gilroy", sans-serif;
+  font-size: 47px;
+  line-height: 48px;
+  letter-spacing: 0.01em;
+  font-weight: 800;
+  color: #000000;
+}
+
+.about-us h2::before,
+.contacts h2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 80px;
+  height: 7px;
+
+  background-color: #000000;
+}
+
+.about-us p,
+.contacts  p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
+
+  letter-spacing: 0;
+}
+
+.about-us ul {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 55px;
+  margin-top: 65px;
+
+  list-style: none;
+
+  font-family: "Gilroy", sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 40px;
+  letter-spacing: 0;
+}
+
+.about-us li {
+  position: relative;
+
+  margin: 0;
+  padding: 0;
+  padding-left: 35px;
+}
+
+.about-us li::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: 0;
+
+  box-sizing: border-box;
+
+  border: 2px solid #e5e5e5;
+  border-radius: 50%;
+
+  width: 8px;
+  height: 8px;
+}
+
+.yellow-button {
+  display: inline-block;
+
+  box-sizing: border-box;
+  
+  border: none;
+  
+  cursor: pointer;
+  
+  padding-right: 20px;
+  padding-left: 23px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-bottom: 25px;
+  margin-right: 120px;
+  
+  height: 40px;
+  
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  font-family: "Gilroy", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.2em;
+  font-weight: 800;
+  color: #000000;
+  text-transform: uppercase;
+  
+  background: linear-gradient(transparent 40%, #f0c52e 40%, #f0c52e 60%, transparent 60%);
+}
+
+.button-contacts {
+  padding-left: 40px;
+  padding-right: 37px;
+}
+
+.yellow-button:hover {
+  background-color: #f0c52e;
+}
+
+.yellow-button:active {
+  color: #a88a20;  
+}
+
+.contacts img {
+  margin-bottom: 60px;
+  margin-top: 10px;
+}
+
+/*-------------------- Разметка Footer'а --------------------*/
+
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  background-color: #464646;
+}
+
+.footer-logo {
+  margin: 0;
+  padding: 0;
+
+  color: #ffc600;
+  font-family: "Gilroy", sans-serif;
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.footer-logo:hover {
+  opacity: 0.6;
+}
+
+.footer-logo:active {
+  opacity: 0.3;
+}
+
+.footer-top-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+
+  margin-bottom: 25px;
+}
+
+.footer-login {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+
+  list-style: none;
+}
+
+.footer li {
+  margin: 0;
+  padding: 0;
+}
+
+.footer-login-button {
+  display: inline-block;
+
+  position: relative;
+
+  padding-left: 25px;
+  margin-right: 36px;
+
+  text-decoration: none;
+  color: #d3d3d3;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 30px;
+  letter-spacing: 0.01em;
+}
+
+.footer-login-button:hover {
+  color: #ffffff;
+}
+
+.footer-login-button:hover svg rect,
+.footer-login-button:hover svg path {
+  fill: #b5931c;
+}
+
+.footer-login-button:active {
+  color: #8d8d8d;
+}
+
+.footer-login-button:active svg rect,
+.footer-login-button:active svg path {
+  fill: #7e6d31;
+}
+
+.footer-login ~ .footer-login-button:last-child {
+  margin-right: 0;
+}
+
+.footer-login > li:nth-child(2) {
+  margin-left: -15px;
+}
+
+.login-yellow {
+  position: absolute;
+  top: 9px;
+  left: 1px;
+}
+
+.compare-yellow {
+  position: absolute;
+  top: 10px;
+  left: 6px;
+}
+
+.cart-yellow {
+  position: absolute;
+  top: 9px;
+  left: 3px;
+}
+
+.footer-middle-wrapper p {
+  display: block;
+
+  box-sizing: border-box;
+
+  width: 360px;
+
+  padding: 0;
+  margin: 0;
+
+  color: #ffffff;
+}
+
+.footer-middle-wrapper p:last-child {
+  text-align: end;
+}
+
+.footer-middle-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+
+  margin-bottom: 60px;
+}
+
+.footer-middle-wrapper a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.wrapper-center {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+
+  width: 425px;
+}
+
+.wrapper-center a {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.wrapper-center a:hover {
+  opacity: 0.6;
+}
+
+.wrapper-center a:active {
+  opacity: 0.3;
+}
+
+.social-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+
+  width: 440px;
+}
+
+.social-list a {
+  display: inline-block;
+
+  width: 32px;
+  height: 32px;
+}
+
+.social-list li {
+  margin: 0;
+  padding: 0;
+  
+  margin-right: 20px;
+}
+
+.social-list li:last-child {
+  margin-right: 0;
+}
+
+.footer-flex-left,
+.footer-flex-right {
+  width: 360px;
+}
+
+.footer-flex-right {
+  text-align: end;
+}
+
+.social-list li
+
+.fb {
+  background-image: url(/img/fb.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.inst {
+  background-image: url(/img/inst.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.tw {
+  background-image: url(/img/tw.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.fb,
+.inst,
+.tw {
+  opacity: 0.3;
+}
+
+.fb:hover,
+.inst:hover,
+.tw:hover {
+  opacity: 0.6;
+}
+
+.fb:active,
+.inst:active,
+.tw:active {
+  opacity: 0.1;
+}
+
+.html-academy {
+  display: inline-block;
+
+  width: 27px;
+  height: 35px;
+
+  background-image: url(/img/logo-html.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.html-academy:hover {
+  opacity: 0.6;
+}
+
+.html-academy:active {
+  opacity: 0.3;
+}
+
+.footer-bottom-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.yellow-line {
+  width: 80px;
+  height: 7px;
+
+  background-color: #ffc600;
 }
