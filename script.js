@@ -17,7 +17,61 @@ var deliveryButton = document.querySelectorAll(".delivery");
 var warrantyButton = document.querySelectorAll(".warranty");
 var creditButton = document.querySelectorAll(".credit");
 var services = [delivery, warranty, credit];
+var buttonWriteUs = document.querySelector(".button-contacts");
+var writeUs = document.querySelector(".js-popup-write-us");
+var mapClick = document.querySelector(".contacts-map");
+var mapPopup = document.querySelector(".js-popup-map");
+var closePopup = document.querySelectorAll(".modal-close");
+var nameFocus = document.querySelector("input[name='name']");
+var emailFocus = document.querySelector("input[name='email']");
+var feedbackFocus = document.querySelector("textarea[name='letter']");
 
+
+
+
+var isStorageSupport = true;
+var storage = "";
+
+try {
+  storage = localStorage.getItem("login");
+} catch (err) {
+  isStorageSupport = false;
+}
+
+buttonWriteUs.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  writeUs.classList.add("js-popup-show");
+  if (storage) {
+    nameFocus.value = storage;
+    emailFocus.value = storage;
+    feedbackFocus.focus();
+  } else {
+    nameFocus.focus();
+  }
+});
+
+mapClick.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  mapPopup.classList.add("js-popup-show");
+});
+
+for (var i = 0; i <= closePopup.length - 1; i++) {
+  closePopup[i].addEventListener("click", function (evt) {
+    evt.preventDefault();
+    writeUs.classList.remove("js-popup-show");
+    mapPopup.classList.remove("js-popup-show");
+  });
+}
+
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    if (mapPopup.classList.contains("js-popup-show") || writeUs.classList.contains("js-popup-show")) {
+      evt.preventDefault();
+      writeUs.classList.remove("js-popup-show");
+      mapPopup.classList.remove("js-popup-show");
+    }
+  }
+});
 
 buttonCatalog.addEventListener("click", function (evt) {
   evt.preventDefault();
