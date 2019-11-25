@@ -1373,7 +1373,7 @@ body {
   width: 360px;
 }
 
-.popup-flex input[type="text"]:invalid {
+.popup-flex input:invalid {
   background-color: #f6dada;
 }
 
