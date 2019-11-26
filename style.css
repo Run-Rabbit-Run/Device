@@ -1530,3 +1530,28 @@ body {
   
   z-index: 1;
 }
+
+/*--------------- Разметка Страницы Каталога ---------------*/
+/*------------------------- Шапка -------------------------*/
+
+.logout {
+  padding-left: 0;
+
+  opacity: 0.3;
+}
+
+.profile {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.profile li {
+  margin-right: 20px;
+}
+
+.profile li:last-child {
+  margin-right: 0;
+}
+
