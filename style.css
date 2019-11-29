@@ -1555,3 +1555,86 @@ body {
   margin-right: 0;
 }
 
+/*--------------- Разметка Названия раздела ---------------*/
+
+.page-name {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.page-name h2 {
+  margin: 0;
+  padding: 0;
+  margin-top: 35px;
+  margin-bottom: 20px;
+
+  font-family: "Gilroy", sans-serif;
+  font-size: 47px;
+  line-height: 48px;
+  letter-spacing: 0.01em;
+  font-weight: 800;
+  color: #000000;
+}
+
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin: 0;
+  padding: 0;
+  margin-bottom: 43px;
+
+  list-style: none;
+}
+
+.breadcrumbs li {
+  position: relative;
+  
+  margin: 0;
+  padding: 0;
+  margin-right: 38px;
+}
+
+.breadcrumbs li:last-child {
+  margin-right: 0;
+}
+
+.breadcrumbs li:not(:last-child)::after,
+.breadcrumbs li:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  right: -18px;
+
+  width: 5px;
+  height: 1px;
+
+  background-color: #000000;
+}
+
+.breadcrumbs li:not(:last-child)::after {
+  transform: rotate(40deg) translateY(-2px);
+}
+.breadcrumbs li:not(:last-child)::before {
+  transform: rotate(-40deg) translateY(2px);
+}
+
+.breadcrumbs a {
+  text-decoration: none;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: 0.01;
+  color: #000000;
+
+  opacity: 0.3;
+}
+
+.breadcrumbs a:hover {
+  opacity: 0.6;
+}
+
+.breadcrumbs a:active {
+  opacity: 0.1;
+}
