@@ -519,7 +519,7 @@ body {
   color: #000000;
 }
 
-.slider-about {
+.button-long {
   display: inline-block;
   box-sizing: border-box;
 
@@ -538,14 +538,16 @@ body {
   color: #000000;
   text-transform: uppercase;
 
+  cursor: pointer;
+
   background: linear-gradient(transparent 40%, #f0c52e 40%, #f0c52e 60%, transparent 60%);
 }
 
-.slider-about:hover {
+.button-long:hover {
   background-color: #f0c52e;
 }
 
-.slider-about:active {
+.button-long:active {
   color: #a88a20;
 }
 
@@ -1637,4 +1639,683 @@ body {
 
 .breadcrumbs a:active {
   opacity: 0.1;
+}
+
+/*------------------ стилизация каталога ------------------*/
+/*------------------------ Фильтр ------------------------*/
+
+.catalog-columns {
+  position: relative;
+
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+
+  background: linear-gradient(to right, #efefef, #ffffff);
+
+  z-index: 1;
+}
+
+.catalog-filter {
+  padding-left: 58px;
+  padding-right: 70px;
+
+  width: 330px;
+
+  box-sizing: border-box;
+}
+
+.catalog-items {
+  width: 830px;
+
+  box-sizing: border-box;
+}
+
+.catalog-border-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 70px;
+
+  background: linear-gradient(to right, #dcdcdc 50%, #ebebeb 50%);
+
+  z-index: 2;
+}
+
+.filter-name {
+  position: absolute;
+
+  display: block;
+  height: 70px;
+
+  margin: 0;
+  padding: 0;
+  padding-top: 22px;
+
+  font-family: "Gilroy", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.2em;
+  font-weight: 800;
+  color: #000000;
+  text-transform: uppercase;
+  
+  background-color: #dcdcdc;
+  
+  box-sizing: border-box;
+  
+  z-index: 3;
+}
+
+/*-------------- Ползунки фильтра стоимости --------------*/
+
+.filter-price {
+  margin: 0;
+  padding: 0;
+
+  border: none;
+}
+
+.filter-price legend {
+  margin: 0;
+  padding: 0;
+  padding-top: 10px;
+
+  font-family: "Gilroy", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+  font-weight: 800;
+  color: #000000;
+}
+
+.fieldset-margin-top {
+  margin-top: 140px;
+}
+
+.fieldset-wrapper {
+  border-top: 2px solid #000000;
+
+  margin-bottom: 25px;
+}
+
+
+.range-filter {
+  width: 200px;
+}
+
+.range-controls {
+  position: relative;
+
+  height: 11px;
+
+  padding-top: 35px;
+}
+
+.scale {
+  height: 2px;
+
+  background-color: #dbdbdb;
+}
+
+.bar {
+  height: 2px;
+  width: 65%;
+
+  background-color: #91c92f;
+}
+
+.toggle {
+  position: absolute;
+  top: 26px;
+
+  width: 4px;
+  height: 4px;
+
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+
+  background-color: #ababab;
+
+  box-shadow: 0 2px 1px 0 #dadada;
+
+  cursor: pointer;
+}
+
+.toggle-min {
+  left: 0;
+}
+
+.toggle-max {
+  left: 117px;
+}
+
+.price-controls {
+  font-size: 0;
+
+  box-sizing: border-box;
+}
+
+.price-controls label {
+  display: inline-block;
+
+  width: 90px;
+
+  font-family: "Gilroy", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0;
+  font-weight: 300;
+  color: #000000;
+
+  opacity: 0.2;
+
+  box-sizing: border-box;
+}
+
+.price-controls input {
+  width: 60px;
+  padding: 0;
+
+  font-family: "Gilroy", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0;
+  font-weight: 300;
+  color: #000000;
+
+  border: none;
+
+  box-sizing: border-box;  
+}
+
+/*-------------------------- Цвет, bluetooth---------------*/
+
+.filter-color {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 33px;
+
+  border: none;
+
+  border-bottom: 2px solid #000000;
+}
+
+.filter-color legend {
+  margin: 0;
+  padding: 0;
+  padding-top: 10px;
+  padding-bottom: 15px;
+
+  font-family: "Gilroy", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+  font-weight: 800;
+  color: #000000;
+}
+
+.filter-color ul,
+.filter-bluetooth ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.filter-color li,
+.filter-bluetooth li {
+  margin: 0;
+  padding: 0;
+}
+
+.filter-color label,
+.filter-bluetooth label {
+  position: relative;
+
+  padding-left: 40px;
+
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 40px;
+  letter-spacing: 0.01;
+  color: #000000;
+  
+  cursor: pointer;
+}
+
+.checkbox-icon {
+  position: absolute;
+  top: -2px;
+  left: 0;
+
+  width: 27px;
+  height: 23px;
+
+  box-sizing: border-box;
+
+  background-image: url(/img/checkbox-off.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.filter-color label:hover .checkbox-icon {
+  opacity: 0.6;
+}
+
+.filter-color label:active .checkbox-icon {
+  background-image: url(/img/checkbox-on.svg);
+}
+
+.filter-color input:disabled ~ label {
+  opacity: 0.25;
+}
+
+.filter-color input:checked ~ label .checkbox-icon {
+  background-image: url(/img/checkbox-on.svg);
+}
+
+.filter-color input:checked ~ label:hover .checkbox-icon {
+  opacity: 0.6;
+}
+
+.filter-color input:checked ~ label:active .checkbox-icon {
+  background-image: url(/img/checkbox-off.svg);
+}
+
+.filter-bluetooth {
+  border-top: 2px solid #000000;
+
+  margin: 0;
+  padding: 0;
+  margin-top: -15px;
+
+  border: none;
+}
+
+.filter-bluetooth legend {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 15px;
+
+  font-family: "Gilroy", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+  font-weight: 800;
+  color: #000000;
+}
+
+.filter-bluetooth label::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 0;
+
+  width: 25px;
+  height: 25px;
+
+  box-sizing: border-box;
+
+  background-color: #000000;
+
+  border: 4px solid #000000;
+  border-radius: 50%;
+
+  box-shadow: inset 0 0 0 10px #efefef;
+}
+
+.filter-bluetooth input:checked ~ label::after {
+  box-shadow: inset 0 0 0 4px #efefef;
+}
+
+.filter-show {
+  border: none;
+
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/*-------------------- каталог товаров --------------------*/
+
+.catalog-items {
+  z-index: 3;
+
+  background-color: #ffffff;
+}
+
+.catalog-items-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+
+  padding-left: 70px;
+
+  height: 70px;
+
+  background-color: #ebebeb;
+
+  box-sizing: border-box;
+}
+
+.sort-type-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin: 0;
+  padding: 0;
+  margin-top: 25px;
+
+  list-style: none;
+}
+
+.sort-type-list li {
+  margin: 0;
+  padding: 0;
+  margin-right: 25px;
+
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: normal;
+  letter-spacing: 0em;
+}
+
+.catalog-items-header a {
+  text-decoration: none;
+  color: #000000;
+
+  opacity: 0.3;
+}
+
+.catalog-items-header a:hover {
+  opacity: 0.6;
+}
+
+.catalog-items-header a:active {
+  opacity: 1;
+}
+
+.catalog-items-header b {
+  margin: 0;
+  padding: 0;
+  margin-top: 22px;
+  margin-right: 55px;
+
+  font-family: "Gilroy", sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.sort-low-high {
+  margin-left: auto;
+  margin-top: 30px;
+
+  background-image: url(/img/low-high.svg);
+
+  width: 11px;
+  height: 10px;
+}
+
+.sort-high-low {
+  margin-left: 19px;
+  margin-top: 30px;
+
+  background-image: url(/img/high-low.svg);
+
+  width: 11px;
+  height: 10px;
+}
+
+.catalog-items-header .sort-active {
+  opacity: 1;
+}
+
+.items-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.item {
+  position: relative;
+
+  margin: 0;
+  padding: 0;
+  margin-bottom: 47px;
+
+  width: 360px;
+}
+
+.item a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.item-img {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 17px;
+}
+
+.js-item-image-hover {
+  opacity: 0.5;
+}
+
+.item-title a {
+  max-width: 250px;
+
+  text-decoration: none;
+  color: #000000;
+  font-family: "Gilroy", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+}
+
+.item-title {
+  margin: 0;
+  padding: 0;
+  margin-top: 20px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-price {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+  color: #464646;
+}
+
+.in-cart {
+  display: none;
+
+  position: absolute;
+  top: 170px;
+  left: 80px;
+
+  margin: 0;
+  padding-left: 37px;
+  padding-right: 37px;
+
+  border: none;
+}
+
+.item-compare {
+  display: none;
+
+  position: absolute;
+  top: 215px;
+  left: 110px;
+
+  padding: 0;
+  margin: 0;
+
+  border: none;
+
+  cursor: pointer;
+
+  background-color: transparent;
+
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 36px;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+
+  opacity: 0.5;
+}
+
+.js-button-show {
+  display: block;
+}
+
+.item-compare:hover {
+  opacity: 1;
+}
+
+.item-compare:active {
+  opacity: 0.2;
+}
+
+.items {
+  padding-top: 70px;
+  padding-left: 70px;
+  padding-bottom: 70px;
+  padding-right: 0;
+}
+
+.item-new::before {
+  content: "new";
+  position: absolute;
+  top: 29px;
+  right: 27px;
+
+  width: 60px;
+  height: 60px;
+
+  padding-top: 17px;
+
+  color: #000000;
+  font-family: "Gilroy", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+
+  border: 2px solid #000000;
+  border-radius: 50%;
+
+  box-sizing: border-box;
+
+  opacity: 0.2;
+}
+
+/*-------------- Навигация по страницам товаров --------------*/
+
+.items-navigation {
+  margin-top: -10px;
+  margin-bottom: 7px;
+}
+
+.items-navigation a {
+  text-decoration: none;
+}
+
+.pages-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.pages-list li {
+  margin: 0;
+  padding: 0;
+
+  margin-right: 30px;
+}
+
+.pages-list li:last-child {
+  margin-right: 0;
+}
+
+.items-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  background-color: #ebebeb;
+}
+
+.button-item-nav {
+  padding-top: 23px;
+
+  width: 125px;
+  height: 70px;
+
+  background-color: #ebebeb;
+
+  box-sizing: border-box;
+
+  text-align: center;
+  color: #000000;
+  font-family: "Gilroy", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.button-item-nav:hover {
+  background-color: #d9d9d9;
+}
+
+.button-item-nav:active {
+  opacity: 0.3;
+
+  background-color: #d9d9d9;
+}
+
+.page {
+  color: #000000;
+  font-family: "Gilroy", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+
+  opacity: 0.3;
+}
+
+.page:hover {
+  opacity: 0.6;
+}
+
+.page:active,
+.page-active {
+  opacity: 1;
 }
