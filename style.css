@@ -1,32 +1,32 @@
 @font-face {
   font-family: "Gilroy";
   src: local("Gilroy"),
-       url(/fonts/gilroyextrabold.woff) format("woff"),
-       url(/fonts/gilroyextrabold.woff2) format("woff2");
+       url(fonts/gilroyextrabold.woff) format("woff"),
+       url(fonts/gilroyextrabold.woff2) format("woff2");
   font-weight: 800;
 }
 
 @font-face {
   font-family: "Gilroy";
   src: local("Gilroy"),
-       url(/fonts/gilroylight.woff) format("woff"),
-       url(/fonts/gilroylight.woff2) format("woff2");
+       url(fonts/gilroylight.woff) format("woff"),
+       url(fonts/gilroylight.woff2) format("woff2");
   font-weight: 300;
 }
 
 @font-face {
   font-family: "Open Sans";
   src: local("Open Sans"),
-       url(/fonts/opensans.woff) format("woff"),
-       url(/fonts/opensans.woff2) format("woff2");
+       url(fonts/opensans.woff) format("woff"),
+       url(fonts/opensans.woff2) format("woff2");
   font-weight: normal;
 }
 
 @font-face {
   font-family: "Open Sans";
   src: local("Open Sans"),
-       url(/fonts/opensanslight.woff) format("woff"),
-       url(/fonts/opensanslight.woff2) format("woff2");
+       url(fonts/opensanslight.woff) format("woff"),
+       url(fonts/opensanslight.woff2) format("woff2");
   font-weight: 300;
 }
 
@@ -275,19 +275,19 @@ body {
 }
 
 .login {
-  background-image: url(/img/user.svg);
+  background-image: url(img/user.svg);
   background-repeat: no-repeat;
   background-position: 1px 9px;
 }
 
 .compare {
-  background-image: url(/img/compare.svg);
+  background-image: url(img/compare.svg);
   background-repeat: no-repeat;
   background-position: 6px 10px;
 }
 
 .cart {
-  background-image: url(/img/cart.svg);
+  background-image: url(img/cart.svg);
   background-repeat: no-repeat;
   background-position: 3px 9px;
 }
@@ -1232,19 +1232,19 @@ body {
 .social-list li
 
 .fb {
-  background-image: url(/img/fb.svg);
+  background-image: url(img/fb.svg);
   background-repeat: no-repeat;
   background-position: 0 0;
 }
 
 .inst {
-  background-image: url(/img/inst.svg);
+  background-image: url(img/inst.svg);
   background-repeat: no-repeat;
   background-position: 0 0;
 }
 
 .tw {
-  background-image: url(/img/tw.svg);
+  background-image: url(img/tw.svg);
   background-repeat: no-repeat;
   background-position: 0 0;
 }
@@ -1273,7 +1273,7 @@ body {
   width: 27px;
   height: 35px;
 
-  background-image: url(/img/logo-html.svg);
+  background-image: url(img/logo-html.svg);
   background-repeat: no-repeat;
   background-position: 0 0;
 }
@@ -1897,7 +1897,7 @@ body {
 
   box-sizing: border-box;
 
-  background-image: url(/img/checkbox-off.svg);
+  background-image: url(img/checkbox-off.svg);
   background-repeat: no-repeat;
   background-position: 0 0;
 }
@@ -1907,7 +1907,7 @@ body {
 }
 
 .filter-color label:active .checkbox-icon {
-  background-image: url(/img/checkbox-on.svg);
+  background-image: url(img/checkbox-on.svg);
 }
 
 .filter-color input:disabled ~ label {
@@ -1915,7 +1915,7 @@ body {
 }
 
 .filter-color input:checked ~ label .checkbox-icon {
-  background-image: url(/img/checkbox-on.svg);
+  background-image: url(img/checkbox-on.svg);
 }
 
 .filter-color input:checked ~ label:hover .checkbox-icon {
@@ -1923,7 +1923,7 @@ body {
 }
 
 .filter-color input:checked ~ label:active .checkbox-icon {
-  background-image: url(/img/checkbox-off.svg);
+  background-image: url(img/checkbox-off.svg);
 }
 
 .filter-bluetooth {
@@ -2057,7 +2057,7 @@ body {
   margin-left: auto;
   margin-top: 30px;
 
-  background-image: url(/img/low-high.svg);
+  background-image: url(img/low-high.svg);
 
   width: 11px;
   height: 10px;
@@ -2067,7 +2067,7 @@ body {
   margin-left: 19px;
   margin-top: 30px;
 
-  background-image: url(/img/high-low.svg);
+  background-image: url(img/high-low.svg);
 
   width: 11px;
   height: 10px;
